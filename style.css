@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: transparent;
+}
+
+.controller.ds4 {
+  --pad-scale: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 806px;
+  height: 598px;
+  background: url(ps4-assets/base.svg) no-repeat center;
+  transform: translate(-50%, -50%) scale(var(--pad-scale));
+  transform-origin: center center;
+}
+
+#trail-canvas {
+  position: absolute;
+  inset: 0;
+  width: 806px;
+  height: 598px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.ds4 .triggers {
+  width: 588px;
+  height: 90px;
+  position: absolute;
+  left: 109px;
+  top: 0;
+  z-index: 2;
+}
+
+.ds4 .trigger {
+  width: 99px;
+  height: 100%;
+  background: url(ps4-assets/triggers.svg);
+  opacity: 0;
+}
+
+.ds4 .trigger.left {
+  float: left;
+}
+
+.ds4 .trigger.right {
+  float: right;
+  background-position-x: 99px;
+}
+
+.ds4 .bumpers {
+  position: absolute;
+  width: 588px;
+  height: 23px;
+  left: 109px;
+  top: 94px;
+  z-index: 2;
+}
+
+.ds4 .bumper {
+  width: 99px;
+  height: 23px;
+  background: url(ps4-assets/bumper.svg) no-repeat;
+  opacity: 0;
+}
+
+.ds4 .bumper.left {
+  float: left;
+}
+
+.ds4 .bumper.right {
+  float: right;
+  transform: rotateY(180deg);
+}
+
+.ds4 .bumper.pressed {
+  opacity: 1;
+}
+
+.ds4 .arrows {
+  position: absolute;
+  width: 352px;
+  height: 46px;
+  top: 142px;
+  left: 227px;
+  z-index: 6;
+}
+
+.ds4 .back,
+.ds4 .start {
+  background: url(ps4-assets/start.svg);
+  width: 28px;
+  height: 46px;
+  opacity: 0;
+}
+
+.ds4 .back {
+  float: left;
+}
+
+.ds4 .start {
+  float: right;
+  background-position: 28px 0;
+}
+
+.ds4 .back.pressed,
+.ds4 .start.pressed {
+  opacity: 1;
+}
+
+.ds4 .abxy {
+  position: absolute;
+  width: 170px;
+  height: 171px;
+  top: 159px;
+  left: 567px;
+  z-index: 7;
+}
+
+.ds4 .button {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: url(ps4-assets/face.svg);
+}
+
+.ds4 .button.pressed {
+  background-position-y: 55px;
+}
+
+.ds4 .a {
+  background-position: 0 0;
+  bottom: 0;
+  left: 58px;
+}
+
+.ds4 .b {
+  background-position: -57px 0;
+  top: 58px;
+  right: 0;
+}
+
+.ds4 .x {
+  background-position: -113px 0;
+  top: 58px;
+  left: 0;
+}
+
+.ds4 .y {
+  background-position: 55px 0;
+  left: 58px;
+  top: 0;
+}
+
+.ds4 .dpad {
+  position: absolute;
+  width: 125px;
+  height: 126px;
+  top: 181px;
+  left: 92px;
+  z-index: 7;
+}
+
+.ds4 .face {
+  background: url(ps4-assets/dpad.svg);
+  position: absolute;
+}
+
+.ds4 .face.up,
+.ds4 .face.down {
+  width: 36px;
+  height: 52px;
+}
+
+.ds4 .face.left,
+.ds4 .face.right {
+  width: 52px;
+  height: 36px;
+}
+
+.ds4 .face.up {
+  left: 44px;
+  top: 0;
+  background-position: -37px 0;
+}
+
+.ds4 .face.down {
+  left: 44px;
+  bottom: 0;
+  background-position: 0 0;
+}
+
+.ds4 .face.left {
+  top: 45px;
+  left: 0;
+  background-position: 104px 0;
+}
+
+.ds4 .face.right {
+  top: 45px;
+  right: 0;
+  background-position: 52px 0;
+}
+
+.ds4 .face.pressed {
+  background-position-y: 52px;
+}
